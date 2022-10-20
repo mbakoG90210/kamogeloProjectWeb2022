@@ -13,7 +13,7 @@ html {
 
 button,
 body {
-  font-family: "Roboto", sans-serif
+  font-family: "Roboto", sans-serif;
 }
 
 * {
@@ -389,15 +389,12 @@ section .containerArticle {
   column-count: 3;
   column-gap: 10px;
   padding: 20px 40px;
-
 }
 
 .gallery .containerGallery .galleryImage {
   margin-bottom: 20px;
   overflow: hidden;
   position: relative;
-
-
 }
 
 .gallery .containerGallery .galleryImage img {
@@ -413,7 +410,6 @@ section .containerArticle {
   background-color: rgb(9, 83, 19);
   color: #fff;
   width: 100%;
-
 }
 
 .contact .containerAdoptJoin {
@@ -445,7 +441,7 @@ section .containerArticle {
   border: 0;
   outline: #444;
   cursor: pointer;
-  box-shadow: 0 0 10px #000; 
+  box-shadow: 0 0 10px #000;
   font-size: 16px;
   font-weight: 600;
 }
@@ -464,8 +460,6 @@ section .containerArticle {
   background-color: var(--greenTheme);
   color: #fff;
 }
-
-
 
 #sectionContacts .containerDocCards {
   margin: 0 50px;
@@ -495,7 +489,6 @@ section .containerArticle {
   border: 1px solid #ccc;
   position: relative;
 }
-
 
 #sectionContacts .cards > div .title {
   font-size: 18px;
@@ -536,7 +529,7 @@ footer {
 }
 
 footer .containerFooter {
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 50px;
 }
@@ -571,7 +564,6 @@ footer .containerNewsletter input {
   padding: 10px 20px;
   border-radius: 20px;
   width: 100%;
-
 }
 
 /* Responsiveness comfiguration */
@@ -582,7 +574,6 @@ footer .containerNewsletter input {
     overflow: hidden;
     position: relative;
   }
-  
 }
 
 @media screen and (max-width: 1140px) {
@@ -601,49 +592,48 @@ footer .containerNewsletter input {
     margin-top: 200px;
   }
   #sectionAbout .cards {
-   justify-content:space-around;
-   margin: 10px 0;
+    justify-content: space-around;
+    margin: 10px 0;
   }
   #sectionContacts .containerDocCards {
     padding-bottom: 500px;
   }
 }
 
-
 @media screen and (max-width: 1024px) {
   .banner {
-      background-position-x: 45%;
+    background-position-x: 45%;
   }
   .banner h1 {
     font-size: 2.5rem;
   }
-@media screen and (max-width: 810px) {
- #sectionContacts .containerDocCards {
-    padding-bottom: 900px;
+  @media screen and (max-width: 810px) {
+    #sectionContacts .containerDocCards {
+      padding-bottom: 900px;
+    }
   }
 }
-  
-}
-  
+
 @media screen and (max-width: 768px) {
   header nav {
-   position: relative;
-   border: 2px solid #fff;
-   height: 30px;
-   width: 30px; 
-   margin-top: 20px;
-   border-radius: 5px;
+    position: relative;
+    border: 2px solid #fff;
+    height: 30px;
+    width: 30px;
+    margin-top: 20px;
+    border-radius: 5px;
   }
 
   header nav:after {
     top: 17px;
   }
-  
+
   header nav:before {
     top: 7px;
   }
 
-  header nav:after, header nav:before {
+  header nav:after,
+  header nav:before {
     content: "";
     position: absolute;
     left: 5px;
@@ -663,12 +653,11 @@ footer .containerNewsletter input {
   header nav ul li {
     display: block;
     text-align: center;
-
   }
 
   header nav ul li a {
     width: 300px;
-    font-size: 16px;  
+    font-size: 16px;
     background-color: #00000095;
   }
 
@@ -684,7 +673,8 @@ footer .containerNewsletter input {
     font-size: 14px;
   }
 
-  .banner p, .banner h1 {
+  .banner p,
+  .banner h1 {
     width: 70%;
   }
 
@@ -699,20 +689,83 @@ footer .containerNewsletter input {
   }
 
   .education .containerEducation {
-    width: 90%
+    width: 90%;
   }
 
   .education .containerEducation h3 {
     font-size: 30px;
     font-weight: 300;
   }
-  
+
   .gallery .containerGallery {
     column-count: 2;
   }
 }
 
+@media screen and (max-width: 425px) {
+  /*.body {
+    margin: 0;
+    padding: 0;
+  }*/
+  .banner h1 {
+    margin-top: 150px;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
 
-/*@media screen and (max-width: 425px) {
-  
+  .banner button {
+    margin-bottom: 10px;
+  }
+
+  #sectionAbout p {
+    text-align: justify;
+  }
+  #sectionAbout .cards > div:hover {
+    width: 400px;
+    margin-top: 10px;
+    padding: 35px;
+  }
+
+  .programs .containerBox {
+    grid-template-columns: 1fr;
+  }
+
+  .education .containerEducation {
+    width: 95%;
+  }
+
+  .gallery .containerGallery {
+    column-count: 1;
+  }
+
+  .contact .containerAdoptJoin {
+    grid-template-columns: 1fr;
+  }
+
+  footer .containerFooter {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main {
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  #sectionAbout .cards > div:hover {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .education .containerEducation h3 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .banner h1 {
+    margin-top: 100px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
