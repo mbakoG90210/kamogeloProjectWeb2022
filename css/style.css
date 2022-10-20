@@ -13,7 +13,7 @@ html {
 
 button,
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif
 }
 
 * {
@@ -32,7 +32,7 @@ p {
 }
 
 .container {
-  width: 1140px;
+  width: 1200px;
 }
 
 .sectionTitle {
@@ -119,7 +119,6 @@ section .containerArticle {
   width: 100%;
   background-image: url("../images/banner.jpg");
   background-size: cover;
-  background-attachment: fixed;
 }
 
 .banner h1 {
@@ -167,13 +166,12 @@ section .containerArticle {
 
 #sectionAbout .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, 350px);
   gap: 10px;
   grid-auto-rows: minmax(150px, auto);
   justify-content: space-between;
   margin-top: 50px;
   position: relative;
-  height: 300px;
 }
 
 #sectionAbout .cards > div {
@@ -234,14 +232,14 @@ section .containerArticle {
   width: 100%;
   padding: 50px;
   background-color: #e2e2e2;
-  margin-top: 250px;
 }
 
 .programs .containerBox {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, 250px);
   grid-gap: 50px;
   margin-bottom: 50px;
+  align-items: center;
 }
 
 .programs .containerBox .box {
@@ -383,12 +381,14 @@ section .containerArticle {
 }
 
 #sectionGallery .container {
-  margin: 0 50px 20px;
+  background-color: #e2e2e2;
+  width: 100%;
 }
 
 .gallery .containerGallery {
   column-count: 3;
-  column-gap: 20px;
+  column-gap: 10px;
+  padding: 20px 40px;
 
 }
 
@@ -396,11 +396,12 @@ section .containerArticle {
   margin-bottom: 20px;
   overflow: hidden;
   position: relative;
-  border-radius: 15px;
+
 
 }
 
 .gallery .containerGallery .galleryImage img {
+  border-radius: 15px;
   transition: 0.5s;
 }
 
@@ -473,8 +474,8 @@ section .containerArticle {
 
 #sectionContacts .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, 350px);
+  grid-gap: 250px 10px;
   grid-auto-rows: minmax(100px, auto);
   justify-content: space-between;
   position: relative;
@@ -575,6 +576,143 @@ footer .containerNewsletter input {
 
 /* Responsiveness comfiguration */
 
-@media screen {
+@media screen and (min-width: 1024px) {
+  .education {
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+  }
+  
+}
+
+@media screen and (max-width: 1140px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .education .videoPlayer {
+    width: 1280px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .banner h1 {
+    margin-top: 200px;
+  }
+  #sectionAbout .cards {
+   justify-content:space-around;
+   margin: 10px 0;
+  }
+  #sectionContacts .containerDocCards {
+    padding-bottom: 500px;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .banner {
+      background-position-x: 45%;
+  }
+  .banner h1 {
+    font-size: 2.5rem;
+  }
+@media screen and (max-width: 810px) {
+ #sectionContacts .containerDocCards {
+    padding-bottom: 900px;
+  }
+}
+  
+}
+  
+@media screen and (max-width: 768px) {
+  header nav {
+   position: relative;
+   border: 2px solid #fff;
+   height: 30px;
+   width: 30px; 
+   margin-top: 20px;
+   border-radius: 5px;
+  }
+
+  header nav:after {
+    top: 17px;
+  }
+  
+  header nav:before {
+    top: 7px;
+  }
+
+  header nav:after, header nav:before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    width: 17px;
+    height: 2px;
+    background-color: rgba(31, 197, 81, 0.5);
+    display: block;
+  }
+
+  header nav ul {
+    position: absolute;
+    right: -400px;
+    top: 53px;
+    transition: 0.5s;
+  }
+
+  header nav ul li {
+    display: block;
+    text-align: center;
+
+  }
+
+  header nav ul li a {
+    width: 300px;
+    font-size: 16px;  
+    background-color: #00000095;
+  }
+
+  header nav:hover ul {
+    right: 0;
+  }
+
+  .banner {
+    background-position-x: 65%;
+  }
+
+  .banner p {
+    font-size: 14px;
+  }
+
+  .banner p, .banner h1 {
+    width: 70%;
+  }
+
+  .education {
+    height: 70vh;
+  }
+
+  .education .containerEducation p {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 5px 0 10px;
+  }
+
+  .education .containerEducation {
+    width: 90%
+  }
+
+  .education .containerEducation h3 {
+    font-size: 30px;
+    font-weight: 300;
+  }
+  
+  .gallery .containerGallery {
+    column-count: 2;
+  }
+}
+
+
+/*@media screen and (max-width: 425px) {
   
 }
