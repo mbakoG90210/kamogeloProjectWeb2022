@@ -9,11 +9,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 button,
 body {
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 * {
@@ -25,6 +27,7 @@ body {
 p {
   font-size: 14px;
   line-height: 26px;
+  text-align: justify;
 }
 
 .fullContainer {
@@ -398,7 +401,6 @@ section .containerArticle {
 }
 
 .gallery .containerGallery .galleryImage img {
-  border-radius: 15px;
   transition: 0.5s;
 }
 
@@ -703,10 +705,6 @@ footer .containerNewsletter input {
 }
 
 @media screen and (max-width: 425px) {
-  /*.body {
-    margin: 0;
-    padding: 0;
-  }*/
   .banner h1 {
     margin-top: 150px;
     font-size: 2rem;
@@ -751,11 +749,40 @@ footer .containerNewsletter input {
   main {
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .sectionTitle {
+    width: 220px;
+  }
+
+  .containerAbout {
+    padding: 20px;
+  }
+
+  #sectionAbout .cards > div {
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    height: 650px;
   }
 
   #sectionAbout .cards > div:hover {
-    width: 100%;
-    margin-top: 10px;
+    width: 300px;
+    margin: 10px;
+    height: 700px;
+  }
+
+  #sectionPrograms {
+    padding: 0;
+  }
+
+  .education {
+    height: 75vh;
+    position: relative;
+  }
+  .education .containerEducation {
+    width: 90%;
   }
 
   .education .containerEducation h3 {
@@ -767,5 +794,26 @@ footer .containerNewsletter input {
     margin-top: 100px;
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .gallery .containerGallery {
+    padding: 0;
+  }
+
+  #sectionContacts .cards {
+    grid-template-columns: 1fr;
+  }
+
+  #sectionContacts .cards > div {
+    background: #f5f5f5;
+    width: 250px;
+    height: 340px;
+    padding: 10px 0;
+    margin: 20px 0;
+  }
+
+  #sectionContacts .cards > div p {
+    font-size: 14px;
+    margin: 10px;
   }
 }
